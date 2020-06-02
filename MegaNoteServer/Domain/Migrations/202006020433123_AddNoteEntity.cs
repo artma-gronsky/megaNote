@@ -11,12 +11,13 @@
                 "dbo.Notes",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
+                        Id = c.Guid(nullable: false, identity: true),
                         FirstName = c.String(maxLength: 255),
                         LastName = c.String(maxLength: 255),
                         Phone = c.String(nullable: false),
                         Email = c.String(),
-                        CreationDate = c.DateTime(nullable: false),
+                        AdditionalInfo = c.String(maxLength: 500),
+                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
                 .PrimaryKey(t => t.Id);
             

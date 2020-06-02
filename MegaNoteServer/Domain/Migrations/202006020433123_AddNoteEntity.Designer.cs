@@ -13,7 +13,7 @@ namespace Domain.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202006012128013_AddNoteEntity"; }
+            get { return "202006020433123_AddNoteEntity"; }
         }
         
         string IMigrationMetadata.Source

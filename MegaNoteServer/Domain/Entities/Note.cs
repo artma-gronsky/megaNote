@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
@@ -21,6 +22,7 @@ namespace Domain.Entities
         [MaxLength(500)]
         public virtual string AdditionalInfo { get; set; }
 
+        [Column("CreationDate", TypeName = "DateTime2")]
         public virtual DateTime CreationDate { get; set; }
 
         public Note()

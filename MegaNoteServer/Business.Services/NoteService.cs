@@ -61,6 +61,7 @@ namespace Business.Services
         public NoteResponseModel[] GetAll()
         {
             return _noteRepository.GetAll()
+                .ToList()
                 .Select(x => new NoteResponseModel(x.Id, x.FirstName, x.FirstName, x.Phone, x.Email, x.CreationDate))
                 .ToArray();
         }
